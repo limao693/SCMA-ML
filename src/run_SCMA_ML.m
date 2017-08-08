@@ -54,7 +54,7 @@ data_source = ceil(rand(PAR.VN,PAR.Data_length)*4);
 data_source_2 = four2two(data_source);
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %% Turbo encoding
-% data_source_2 = data_source_2';    %¾ØÕó·­×ª ÒÔ±ãTurbo±àÂë
+% data_source_2 = data_source_2';    %çŸ©é˜µç¿»è½¬ ä»¥ä¾¿Turboç¼–ç 
 % intrlvrIndices = randperm(PAR.Data_length*2);
 % hTEnc = comm.TurboEncoder('TrellisStructure',poly2trellis(4, ...
 %         [13 15 17],13),'InterleaverIndices',intrlvrIndices);
@@ -66,7 +66,7 @@ data_source_2 = four2two(data_source);
 %     data_TE(:, n) = step(hTEnc, data_source_2(:,n));
 % end
 % %% SCMA encoding
-% data_TE = data_TE';    %¾ØÕó·­×ª ÒÔ±ãSCMA±àÂë
+% data_TE = data_TE';    %çŸ©é˜µç¿»è½¬ ä»¥ä¾¿SCMAç¼–ç 
 % data_TE_4 = two2four(data_TE);
 % 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -80,7 +80,7 @@ SER(1, length(PAR.EbNo)) = 0;
 for n = 1:length(PAR.EbNo)
     reset(hChan)    
         hChan.EbNo = PAR.EbNo(n);
-    PRE = step(hChan, PRE_o);   %AWGN ĞÅµÀÊä³ö
+    PRE = step(hChan, PRE_o);   %AWGN ä¿¡é“è¾“å‡º
     
     % MPA detect
     [err_sum,demodSignal] = scmaDeML(PAR.CB, PRE, data_source);
