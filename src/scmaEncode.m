@@ -4,9 +4,9 @@
 %      -Data_source: the data to mapping resource
 %ouput -PRE_o(a.k.a y):sending single
 function [PRE_o] = scmaEncode(Data_source,CB)
-%»ñÈ¡VN FN MÖµ£¬mÖµÔİÊ±ÎŞÓÃ
+%è·å–VN FN Må€¼ï¼Œmå€¼æš‚æ—¶æ— ç”¨
 [m, FN, VN] = size(CB);
-%»ñÈ¡Êı¾İ³¤¶È
+%è·å–æ•°æ®é•¿åº¦
 Data_length = length(Data_source);  
 PRE_o=zeros(FN,Data_length);
 for data_ind=1:Data_length
