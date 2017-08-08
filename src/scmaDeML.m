@@ -1,4 +1,4 @@
-%×î´óËÆÈ»¼ì²â
+%Ã—Ã®Â´Ã³Ã‹Ã†ÃˆÂ»Â¼Ã¬Â²Ã¢
 
 function [err_sum,demodSignal] = scmaDeML(CB, PRE, data_source)
     DataLength = length(PRE);
